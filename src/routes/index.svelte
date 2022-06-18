@@ -7,7 +7,9 @@
 			</p>
 			<div class="mt-5">
 				<button class="btn btn-primary">View Vendors</button>
-				<button class="btn btn-secondary ml-1">Maps</button>
+				<a href="info/maps">
+					<button href="/info/maps" class="btn btn-secondary ml-1">Maps</button>
+				</a>
 			</div>
 		</div>
 		<div class="max-w-md shadow-xl">

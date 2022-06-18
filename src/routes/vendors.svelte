@@ -1,57 +1,97 @@
 <script>
-import { onMount } from 'svelte';
-import algoliasearch from 'algoliasearch/lite';
+	import { onMount } from 'svelte';
+	import algoliasearch from 'algoliasearch/lite';
+	import instantsearch from 'instantsearch.js';
 
-let searchClient;
-let index;
+	import {
+		searchBox,
+		hits,
+		configure,
+		dynamicWidgets,
+		pagination
+	} from 'instantsearch.js/es/widgets';
 
-let query = '';
-let hits = [];
+	let searchClient;
+	let index;
 
-onMount(() => {
+	let query = '';
+	let results = [];
 
-    searchClient = algoliasearch(
-        'TZFAP4YLUO',
-        '0d10e45c3a470d91d19b399e26cc9603'
-    );
+	onMount(() => {
+		// Connecting to algolia
+		const searchClient = algoliasearch('TZFAP4YLUO', '0d10e45c3a470d91d19b399e26cc9603');
 
-    index = searchClient.initIndex('vendors');
+		const search = instantsearch({
+			indexName: 'vendors',
+			searchClient
+		});
 
-    // Warm up search
-    index.search({ query }).then(console.log)
+		index = searchClient.initIndex('vendors');
 
-});
+		search.addWidgets([
+			searchBox({
+				container: '#searchbox'
+			}),
+			hits({
+				container: '#hits',
+				templates: {
+					item: `<div>{{ name }}</div>
+<div class="ml-auto">
+	<span class="badge badge-primary">{{ categoryOne }}</span>
+	<span class="badge badge-secondary">{{ categoryTwo }}</span>
+	<span class="badge badge-accent">{{ categoryThree }}</span>
+</div>`
+				}
+			}),
+			configure({
+				hitsPerPage: 8
+			}),
+			dynamicWidgets({
+				container: '#dynamic-widgets',
+				fallbackWidget({ container, attribute }) {
+					return instantsearch.widgets.panel({ templates: { header: attribute } })(
+						instantsearch.widgets.refinementList
+					)({
+						container,
+						attribute
+					});
+				},
+				widgets: []
+			}),
+			pagination({
+				container: '#pagination'
+			})
+		]);
 
-// Fires on each keyup in form
-async function search() {
-    const result = await index.search({ query });
-    hits = result.hits;
-    console.log(hits)
-}
+		search.start();
+	});
+
+	// Fires on each keyup in form
+	async function filter() {
+		const result = await index.search({ query });
+		results = result.results;
+		console.log(results);
+	}
 </script>
 
-<!-- TODO que??-->
-<style>
-	:global(em) {
-		color: red;
-		font-weight: bold;
-		background: black;
-	}
-</style>
+<div class="max-w-screen-lg mx-auto flex flex-col justify-center px-5 py-7">
+	<p class="text-4xl font-bold text-primary mb-7">Search the list of 2022 Vendors!</p>
+	<div class="container" id="contain">
+		<div class="search-panel">
+			<div class="search-panel__filters">
+				<div id="dynamic-widgets" />
+			</div>
 
-<h1>Svelte InstantSearch</h1>
-
-<div>
-	<input type="text" bind:value={query} on:keyup={search}>
+			<div class="search-panel__results">
+				<div id="searchbox" class="mb-5" />
+				<div id="hits" class="mb-5" />
+				<div id="pagination" />
+			</div>
+		</div>
+	</div>
 </div>
 
-
-{#each hits as hit}
-	<img src={hit.avatar} alt={hit.username}>
-	<section>
-		<h3>{hit.username} {hit.objectID}</h3>
-		<!-- <p>{hit.bio}</p> -->
-
-		<p contenteditable bind:innerHTML={hit._highlightResult.bio.value}></p>
-	</section>
-{/each}
+<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/satellite-min.css"
+/>

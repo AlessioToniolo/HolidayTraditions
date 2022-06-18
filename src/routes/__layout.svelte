@@ -33,7 +33,7 @@
 						>
 					</span>
 					<ul class="p-2 bg-base-100">
-						<li><a href="/info/food">Food</a></li>
+						<li><a href="/info/directions">Directions</a></li>
 						<li><a href="/info/maps">Maps</a></li>
 					</ul>
 				</li>
