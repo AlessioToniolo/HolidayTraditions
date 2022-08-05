@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import algoliasearch from 'algoliasearch/lite';
+	import algoliasearch from 'algoliasearch';
 	import instantsearch from 'instantsearch.js';
 
 	import {
