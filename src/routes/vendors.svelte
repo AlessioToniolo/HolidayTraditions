@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import algoliasearch from 'algoliasearch';
-	import instantsearch from 'instantsearch.js/es/widgets/index.js';
+	import instantsearch from 'instantsearch.js';
 
 	import {
 		searchBox,
@@ -9,7 +9,7 @@
 		configure,
 		dynamicWidgets,
 		pagination
-	} from 'instantsearch.js/es/widgets';
+	} from 'instantsearch.js/es/widgets/index.js';
 
 	let searchClient;
 	let index;
