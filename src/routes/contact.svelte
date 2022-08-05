@@ -52,7 +52,6 @@
 		}
 
 		sendingMessage = true;
-		console.log(email);
 
 		const formData = new FormData();
 
@@ -68,7 +67,6 @@
 			if (res.status !== 200) {
 				throw console.error('Something went wrong with the request!');
 			} else {
-				console.log('Request sent succesfully!');
 				sentMessage = true;
 			}
 		});

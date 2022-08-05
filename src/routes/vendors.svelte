@@ -70,7 +70,6 @@
 	async function filter() {
 		const result = await index.search({ query });
 		results = result.results;
-		console.log(results);
 	}
 </script>
 
