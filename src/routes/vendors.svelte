@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import algoliasearch from 'algoliasearch';
-	import instantsearch from 'instantsearch.js';
+	import instantsearch from 'instantsearch.js/es/widgets/index.js';
 
 	import {
 		searchBox,
