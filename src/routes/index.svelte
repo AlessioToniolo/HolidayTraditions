@@ -10,7 +10,7 @@
 			</p>
 
 			<div class="lg:mt-5 mt-4">
-				<button class="btn btn-primary">View Vendors</button>
+				<a href="/vendors"> <button class="btn btn-primary">View Vendors</button></a>
 				<a
 					href="https://www.eventbrite.com/e/2022-marist-holiday-traditions-juried-vendor-application-registration-310600322927"
 				>

@@ -29,7 +29,7 @@ export async function post({ request }) {
 	// send mail with defined transport object
 	let info = await transporter.sendMail({
 		from: `"${name}" <${email}>`, // sender address
-		to: `test@example.com, test2@example.com`, // list of receivers
+		to: `atoniolo76@gmail.com`, // list of receivers
 		subject: subject, // Subject line
 		text: message // plain text body
 	});
