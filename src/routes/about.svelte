@@ -67,7 +67,8 @@
 		<h2 id="food">Food</h2>
 		<p>
 			The Cooked Goose Café serves lunch featuring our famous homemade Corn Chowder and Poppy Seed
-			Cake. You can also shop our bake sale for homemade cakes and treats for the Holidays.
+			Cake, and our bake sale for homemade cakes and treats for the Holidays. You can find the bake
+			sale and The Cooked Goose Café in the cafeteria.
 		</p>
 	</article>
 </div>
