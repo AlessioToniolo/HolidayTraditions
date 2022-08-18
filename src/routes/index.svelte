@@ -6,7 +6,7 @@
 			</p>
 
 			<p class="lg:text-xl mt-2 lg:mt-0 text-lg font-semibold text-primary">
-				Holiday market with vendors from all over Georgia!
+				Holiday market with vendors from all over the southeast!
 			</p>
 
 			<div class="lg:mt-5 mt-4">
