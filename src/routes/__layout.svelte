@@ -55,7 +55,7 @@
 			<ul class="menu menu-horizontal p-0">
 				<li><a href="/">Home</a></li>
 
-				<li><a href="/vendors">Vendors</a></li>
+				<li><a href="/vendor/vendors">Vendors</a></li>
 				<li tabindex="0">
 					<span>
 						Info

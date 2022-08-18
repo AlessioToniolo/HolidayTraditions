@@ -3,19 +3,22 @@
 	import algoliasearch from 'algoliasearch';
 	import instantsearch from 'instantsearch.js';
 
-	import {
-		searchBox,
-		hits,
-		configure,
-		dynamicWidgets,
-		pagination
-	} from 'instantsearch.js/es/widgets/index.js';
+	import { searchBox, hits, configure, pagination } from 'instantsearch.js/es/widgets/index.js';
 
-	let searchClient;
+	/*
+	// TODO: connecting hits
+	import { connectHits } from 'instantsearch.js/es/connectors';
+	let hitsArray = [];
+	const renderHits = (renderOptions, isFirstRender) => {
+		const { hits, widgetParams } = renderOptions;
+
+		hitsArray = hits;
+	};
+	const customHits = connectHits(renderHits);
+	*/
+
 	let index;
-
 	let query = '';
-	let results = [];
 
 	onMount(() => {
 		// Connecting to algolia
@@ -28,24 +31,46 @@
 
 		index = searchClient.initIndex('vendors');
 
+		// Adding widgets to the search
 		search.addWidgets([
 			searchBox({
 				container: '#searchbox'
-			}),
+			}) /*
+			customHits({
+				container: document.querySelector('#hits')
+			}),*/,
+			/*
 			hits({
 				container: '#hits',
 				templates: {
-					item: `<div>{{ name }}</div>
-<div class="ml-auto">
-	<span class="badge badge-primary">{{ categoryOne }}</span>
-	<span class="badge badge-secondary">{{ categoryTwo }}</span>
-	<span class="badge badge-accent">{{ categoryThree }}</span>
-</div>`
+					item(item) {}
+				}
+			}),
+			*/
+			hits({
+				container: '#hits',
+				templates: {
+					item(item) {
+						return `
+						<div>${item.name}</div>
+						<div class="ml-auto">
+							<a href="/vendor/${item.location}">
+								<button class="btn btn-sm mr-1 btn-primary btn-outline">${item.location}</button>
+							</a>
+							<div class="sm:contents hidden">
+								<span class="badge badge-primary">${item.categoryOne}</span>
+								<span class="badge badge-secondary">${item.categoryTwo}</span>
+								<span class="badge badge-accent">${item.categoryThree}</span>
+							</div>
+						</div>
+						`;
+					}
 				}
 			}),
 			configure({
 				hitsPerPage: 8
 			}),
+			/*
 			dynamicWidgets({
 				container: '#dynamic-widgets',
 				fallbackWidget({ container, attribute }) {
@@ -58,6 +83,7 @@
 				},
 				widgets: []
 			}),
+			*/
 			pagination({
 				container: '#pagination'
 			})
@@ -66,11 +92,19 @@
 		search.start();
 	});
 
+	/*
 	// Fires on each keyup in form
 	async function filter() {
 		const result = await index.search({ query });
 		results = result.results;
 	}
+	*/
+
+	function generateModal(location) {
+		console.log('test');
+	}
+
+	//console.log(hitsArray);
 </script>
 
 <div class="max-w-screen-lg mx-auto flex flex-col justify-center px-5 py-7">
@@ -90,6 +124,19 @@
 	</div>
 </div>
 
+<!--
+{#each hitsArray as result}
+	<div>result.name</div>
+	<div class="ml-auto">
+		<button class="btn btn-xs btn-outline btn-primary mr-1">result.location</button>
+		<div class="sm:contents hidden">
+			<span class="badge badge-primary">result.categoryOne</span>
+			<span class="badge badge-secondary">result.categoryTwo</span>
+			<span class="badge badge-accent">result.categoryThree</span>
+		</div>
+	</div>
+{/each}
+-->
 <link
 	rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/satellite-min.css"
