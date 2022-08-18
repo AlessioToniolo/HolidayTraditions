@@ -52,19 +52,6 @@
 			<li>Children</li>
 			<li>Clothing and Textiles</li>
 		</ul>
-		<h2 id="artist-and-vendor-application">Artist and Vendor Application</h2>
-		<p>Marist students have the opportunity to sell hand-crafted items at Holiday Traditions.</p>
-		<p>
-			We are committed to maintaining a high quality show and continue to be selective in our
-			acceptance of artists and crafters. We thank you for your interest in Holiday Traditions and
-			for your support of Marist School.
-		</p>
-		<p>All accepted vendors will be notified by email by July 2022.</p>
-		<p>
-			<a href="https://www.eventbrite.com/e/310600322927"
-				>Click here to register for the Marist Holiday Traditions Vendor Application!</a
-			>
-		</p>
 		<h2 id="contacting-the-mht-vendor-comitee">Contacting the MHT Vendor Comitee</h2>
 		<p>
 			After you have read through our Holiday Traditions show information and instructions, if you
