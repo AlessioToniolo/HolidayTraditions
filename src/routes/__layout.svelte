@@ -54,12 +54,7 @@
 		<div class="hidden lg:contents flex-none">
 			<ul class="menu menu-horizontal p-0">
 				<li><a href="/">Home</a></li>
-				<li>
-					<a
-						href="https://www.eventbrite.com/e/2022-marist-holiday-traditions-juried-vendor-application-registration-310600322927"
-						>Register</a
-					>
-				</li>
+
 				<li><a href="/vendors">Vendors</a></li>
 				<li tabindex="0">
 					<span>
@@ -87,12 +82,6 @@
 	<div class="menu bg-accent text-white">
 		<ul class={showing}>
 			<a href="/"><li on:click={toggleNav}><b>Home</b></li></a>
-			<a
-				href="https://www.eventbrite.com/e/2022-marist-holiday-traditions-juried-vendor-application-registration-310600322927"
-				><li on:click={toggleNav}>
-					<b> Register</b>
-				</li></a
-			>
 			<a href="/vendors"
 				><li on:click={toggleNav}>
 					<b>Vendors</b>
