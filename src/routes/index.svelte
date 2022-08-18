@@ -11,14 +11,6 @@
 
 			<div class="lg:mt-5 mt-4">
 				<a href="/vendors"> <button class="btn btn-primary">View Vendors</button></a>
-				<a
-					href="https://www.eventbrite.com/e/2022-marist-holiday-traditions-juried-vendor-application-registration-310600322927"
-				>
-					<button
-						href="https://www.eventbrite.com/e/2022-marist-holiday-traditions-juried-vendor-application-registration-310600322927"
-						class="btn btn-secondary ml-1">Register</button
-					>
-				</a>
 				<a href="info/maps">
 					<button href="info/maps" class="btn btn-secondary ml-1">Maps</button>
 				</a>
@@ -61,30 +53,6 @@
 					</p>
 					<div class="card-actions justify-end">
 						<a href="info/maps"> <button class="btn btn-primary">Maps</button></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="pt-20 pb-10 flex justify-center">
-		<div class="max-w-xl">
-			<div class="card w-96 bg-base-100 shadow-xl image-full">
-				<figure><img src="partner-vendors-resized.PNG" alt="Shoes" /></figure>
-				<div class="card-body">
-					<h2 class="card-title">How to Register</h2>
-					<p>
-						Registration is $25.00 and completed on the <a
-							href="https://www.eventbrite.com/e/2022-marist-holiday-traditions-juried-vendor-application-registration-310600322927"
-							class="underline hover:text-gray-200">Eventbrite</a
-						>.
-					</p>
-					<div class="card-actions justify-end">
-						<a
-							href="https://www.eventbrite.com/e/2022-marist-holiday-traditions-juried-vendor-application-registration-310600322927"
-						>
-							<button class="btn btn-primary">Register</button></a
-						>
 					</div>
 				</div>
 			</div>
