@@ -28,12 +28,12 @@
 		<div id="card2" class="card min-w-96 w-96 bg-base-100 shadow-xl">
 			<div class="h-64">
 				<figure class="px-10 pt-10">
-					<img src="/parking-map-cropped.jpeg" alt="Shoes" class="rounded-xl" />
+					<img src="/cropped-market-map.jpg" alt="Shoes" class="rounded-xl" />
 				</figure>
 			</div>
 			<div class="card-body items-center text-center">
-				<p class="card-title mb-2">Parking Map</p>
-				<a href="/parking-map-cropped.jpeg" download="parking-map">
+				<p class="card-title mb-2">Market Map</p>
+				<a href="/colored-market-map.jpg" download="market-map">
 					<button class="btn btn-primary gap-2">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
