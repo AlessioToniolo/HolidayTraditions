@@ -10,7 +10,7 @@
 			</p>
 
 			<div class="lg:mt-5 mt-4">
-				<a href="/vendors"> <button class="btn btn-primary">View Vendors</button></a>
+				<a href="/vendor/vendors"> <button class="btn btn-primary">View Vendors</button></a>
 				<a href="info/maps">
 					<button href="info/maps" class="btn btn-secondary ml-1">Maps</button>
 				</a>
