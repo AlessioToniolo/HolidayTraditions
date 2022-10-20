@@ -58,9 +58,9 @@
 								<button class="btn btn-sm mr-1 btn-primary btn-outline">${item.location}</button>
 							</a>
 							<div class="sm:contents hidden">
-								<span class="badge badge-primary">${item.categoryOne}</span>
-								<span class="badge badge-secondary">${item.categoryTwo}</span>
-								<span class="badge badge-accent">${item.categoryThree}</span>
+								<span class="badge badge-primary">${
+									item.category.substring(0, 1).toUpperCase() + item.category.substring(1)
+								}</span>
 							</div>
 						</div>
 						`;

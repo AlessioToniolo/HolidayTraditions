@@ -2,7 +2,21 @@
 	import { page } from '$app/stores';
 
 	const params = $page.params.slug;
-	const imageLocation = `/locations/${params}.jpg`;
+
+	function formattedImageLocation(str) {
+		const formatted = str.split(' ');
+		let finalStr;
+		if (formatted == 'Arcade') {
+			finalStr = formatted[0] + '%20' + formatted[1];
+		} else {
+			finalStr = formatted[0];
+		}
+
+		console.log(finalStr);
+		return finalStr.toLowerCase();
+	}
+
+	const imageLocation = `/locations/${formattedImageLocation(params)}.jpg`;
 </script>
 
 <div class="modal modal-open">
