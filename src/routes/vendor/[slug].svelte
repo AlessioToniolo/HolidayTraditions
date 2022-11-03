@@ -5,9 +5,11 @@
 
 	function formattedImageLocation(str) {
 		const formatted = str.split(' ');
+		console.log(8989);
 		let finalStr;
-		if (formatted == 'Arcade') {
-			finalStr = formatted[0] + '%20' + formatted[1];
+		if (formatted[0] == 'Arcade') {
+			finalStr = formatted[0].toLowerCase() + formatted[1].toLowerCase();
+			console.log(finalStr);
 		} else {
 			finalStr = formatted[0];
 		}
@@ -16,7 +18,7 @@
 		return finalStr.toLowerCase();
 	}
 
-	const imageLocation = `/locations/${formattedImageLocation(params)}.jpg`;
+	const imageLocation = `/locations/${formattedImageLocation(params)}.png`;
 </script>
 
 <div class="modal modal-open">
