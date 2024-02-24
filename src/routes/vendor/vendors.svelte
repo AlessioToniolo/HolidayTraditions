@@ -108,7 +108,7 @@
 </script>
 
 <div class="max-w-screen-lg mx-auto flex flex-col justify-center px-5 py-7">
-	<p class="text-4xl font-bold text-primary mb-7">Search the list of 2022 Vendors!</p>
+	<p class="text-4xl font-bold text-primary mb-7">Search the list of 2023 Vendors!</p>
 	<div class="container" id="contain">
 		<div class="search-panel">
 			<div class="search-panel__filters">
