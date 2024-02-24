@@ -32,7 +32,7 @@
 					<p>
 						The Holiday Traditions Market will be held at Marist School on Saturday, <b
 							>November 5th</b
-						>, 2022 from <b>9</b> a.m. to <b>4</b> p.m.
+						>, 2023 from <b>9</b> a.m. to <b>4</b> p.m.
 					</p>
 					<div class="card-actions justify-end">
 						<div class="badge badge-outline">11/05/22</div>
